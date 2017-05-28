@@ -36,7 +36,7 @@ function firebasesetup() {
 function loadAll() {
   var ref = database.ref("vivid");
   //ref.orderByChild("time").startAt(1492863129709).endAt(1492864106661).on("child_added", gotAll, errData);
-  ref.orderByChild("time").limitToLast(50).on("child_added", gotAll, errData);
+  ref.orderByChild("time").limitToLast(250).on("child_added", gotAll, errData);
   // The data comes back as an object
   function gotAll(gdata) {
     var sd = {};
