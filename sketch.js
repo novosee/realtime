@@ -35,6 +35,7 @@ function lodaTimeline(syear, smonth, sday, shours, sminutes, eyear, emonth, eday
   var options = {
     start: Date.UTC(syear, smonth - 1, sday, shours, sminutes, 0, 0) + utcoffset,//vis.moment().add(-3, 'hours'), // changed so its faster
     end: Date.UTC(eyear, emonth - 1, eday, ehours, eminutes, 0, 0) + utcoffset,//vis.moment(),
+    orientation: 'top',
   };
   var graph2d = new vis.Graph2d(container, dataset, options);
   var ref = database.ref("vivid");
